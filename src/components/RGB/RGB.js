@@ -1,4 +1,5 @@
 import React from 'react';
+import './RGB.css';
 import { useParams } from 'react-router-dom';
 
 export default function RGB() {
@@ -9,11 +10,11 @@ export default function RGB() {
       className="color"
       style={{
         backgroundColor: color,
-        height: '100vh',
-        width: '100vh',
+        height: '500px',
+        width: '500px',
       }}
     >
-      <p>{color}</p>
+      <h1>{color}</h1>
     </div>
   );
 }

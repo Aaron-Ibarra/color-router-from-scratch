@@ -1,6 +1,7 @@
 import logo from './logo.svg';
-import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Link, Redirect, Route, Switch } from 'react-router-dom';
 import RGB from './components/RGB/RGB.js';
+import NotFound from './components/NotFound.js';
 import './App.css';
 
 function App() {
@@ -10,23 +11,24 @@ function App() {
         <nav>
           <ul>
             <li>
-              <Link to="/RGB/255/0/0">Red</Link>
+              <Link to="/rgb/255/0/0">Red</Link>
             </li>
             <li>
-              <Link to="/RGB/0/255/0">Green</Link>
+              <Link to="/rgb/0/255/0">Green</Link>
             </li>
             <li>
-              <Link to="/RGB/0/0/255">Blue</Link>
+              <Link to="/rgb/0/0/255">Blue</Link>
             </li>
           </ul>
         </nav>
       </div>
 
       <Switch>
-        <Route exact path="/" component={RGB}></Route>
-      </Switch>
-      <Switch>
-        <Route exact path="/RGB/:r/:g/:b" component={RGB}></Route>
+        <Route exact path="/">
+          <Redirect to="/rgb/255/0/0" />
+        </Route>
+        <Route exact path="/rgb/:r/:g/:b" component={RGB} />
+        <Route exact path="*" component={NotFound} />
       </Switch>
     </BrowserRouter>
   );
