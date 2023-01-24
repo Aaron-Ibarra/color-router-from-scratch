@@ -23,10 +23,10 @@ function App() {
       </div>
 
       <Switch>
-        <Route path="/"></Route>
+        <Route exact path="/" component={RGB}></Route>
       </Switch>
       <Switch>
-        <Route path="/RGB/:r/:g/:b"></Route>
+        <Route exact path="/RGB/:r/:g/:b" component={RGB}></Route>
       </Switch>
     </BrowserRouter>
   );
