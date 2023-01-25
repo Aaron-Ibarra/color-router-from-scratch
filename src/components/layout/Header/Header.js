@@ -3,7 +3,7 @@ import logo from './flame-logo.svg';
 import './Header.css';
 
 export default function Header() {
-  const whateverText = '{ React App }';
+  const whateverText = '{ Color Router }';
   return (
     <header>
       <div className="background"></div>
