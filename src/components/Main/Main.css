@@ -9,9 +9,10 @@ button {
   width: 100px;
   height: 100px;
   border-radius: 100%;
+  font-weight: bold;
 }
 
 main {
-  background-color: rgb(58, 58, 58);
-  height: 100vh;
+  background-image: radial-gradient(circle, rgb(255, 255, 255), rgb(77, 77, 77), rgb(0, 0, 0));
+  height: 90vh;
 }
