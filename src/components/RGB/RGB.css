@@ -1,3 +1,18 @@
 div {
   border-radius: 100%;
 }
+
+.value {
+  display: flex;
+}
+
+.color {
+  display: flex;
+  justify-content: center;
+}
+
+.color-wheel {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}

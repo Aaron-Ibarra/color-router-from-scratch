@@ -6,15 +6,19 @@ export default function RGB() {
   const { r, g, b } = useParams();
   const color = `rgb(${r}, ${g}, ${b} )`;
   return (
-    <div
-      className="color"
-      style={{
-        backgroundColor: color,
-        height: '500px',
-        width: '500px',
-      }}
-    >
-      <h1>{color}</h1>
-    </div>
+    <>
+      <section className="color-wheel">
+        <div
+          className="color"
+          style={{
+            backgroundColor: color,
+            height: '500px',
+            width: '500px',
+          }}
+        >
+          <h1 className="value">{color}</h1>
+        </div>
+      </section>
+    </>
   );
 }
